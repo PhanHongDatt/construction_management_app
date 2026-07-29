@@ -1,0 +1,158 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "SDR-.YYYY.-.#####",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "report_date",
+    "project",
+    "prepared_by",
+    "weather",
+    "section_workforce",
+    "workforce",
+    "section_progress",
+    "work_progress",
+    "section_site",
+    "equipment_used",
+    "issues",
+    "resolution",
+    "site_photos",
+    "workflow_state"
+  ],
+  "fields": [
+    {
+      "fieldname": "report_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Report Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Project",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "prepared_by",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Prepared By",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "weather",
+      "fieldtype": "Select",
+      "label": "Weather",
+      "options": "\nSunny\nCloudy\nRainy\nStorm\nOther"
+    },
+    {
+      "fieldname": "section_workforce",
+      "fieldtype": "Section Break",
+      "label": "Workforce"
+    },
+    {
+      "fieldname": "workforce",
+      "fieldtype": "Table",
+      "label": "Workforce",
+      "options": "Site Workforce Row"
+    },
+    {
+      "fieldname": "section_progress",
+      "fieldtype": "Section Break",
+      "label": "Work Progress"
+    },
+    {
+      "fieldname": "work_progress",
+      "fieldtype": "Table",
+      "label": "Work Progress",
+      "options": "Site Work Progress Row",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_site",
+      "fieldtype": "Section Break",
+      "label": "Site Notes"
+    },
+    {
+      "fieldname": "equipment_used",
+      "fieldtype": "Small Text",
+      "label": "Equipment Used"
+    },
+    {
+      "fieldname": "issues",
+      "fieldtype": "Text Editor",
+      "label": "Issues"
+    },
+    {
+      "fieldname": "resolution",
+      "fieldtype": "Text Editor",
+      "label": "Resolution"
+    },
+    {
+      "fieldname": "site_photos",
+      "fieldtype": "Attach",
+      "label": "Site Photos"
+    },
+    {
+      "fieldname": "workflow_state",
+      "fieldtype": "Link",
+      "label": "Workflow State",
+      "no_copy": 1,
+      "options": "Workflow State",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2026-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Construction Management",
+  "name": "Site Daily Report",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Administrator",
+      "share": 1,
+      "submit": 1,
+      "cancel": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Site Manager",
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Site Engineer",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Construction Project Manager"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}

@@ -1,0 +1,4 @@
+# Patches are applied in order during bench migrate.
+# Format: <module>.<patch_function>
+# Example:
+# construction_management.patches.v0_1.rename_field

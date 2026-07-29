@@ -1,0 +1,156 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "PAC-.YYYY.-.#####",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "project",
+    "work_package",
+    "subcontractor",
+    "acceptance_date",
+    "section_items",
+    "items",
+    "total_accepted_amount",
+    "section_signatories",
+    "engineer",
+    "project_manager",
+    "attachment",
+    "workflow_state"
+  ],
+  "fields": [
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Project",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "work_package",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Work Package",
+      "options": "Work Package"
+    },
+    {
+      "fieldname": "subcontractor",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Subcontractor",
+      "options": "Supplier",
+      "reqd": 1
+    },
+    {
+      "fieldname": "acceptance_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Acceptance Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_items",
+      "fieldtype": "Section Break",
+      "label": "Acceptance Items"
+    },
+    {
+      "fieldname": "items",
+      "fieldtype": "Table",
+      "label": "Acceptance Items",
+      "options": "Acceptance Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_accepted_amount",
+      "fieldtype": "Currency",
+      "label": "Total Accepted Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_signatories",
+      "fieldtype": "Section Break",
+      "label": "Signatories"
+    },
+    {
+      "fieldname": "engineer",
+      "fieldtype": "Link",
+      "label": "Engineer",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "project_manager",
+      "fieldtype": "Link",
+      "label": "Project Manager",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "attachment",
+      "fieldtype": "Attach",
+      "label": "Attachment"
+    },
+    {
+      "fieldname": "workflow_state",
+      "fieldtype": "Link",
+      "label": "Workflow State",
+      "no_copy": 1,
+      "options": "Workflow State",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2026-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Construction Management",
+  "name": "Progress Acceptance",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Administrator",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Project Manager",
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Site Engineer",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Quantity Surveyor",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Construction Contractor User"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}

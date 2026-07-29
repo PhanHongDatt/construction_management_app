@@ -1,0 +1,33 @@
+{
+  "app": "construction_management",
+  "charts": [],
+  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Construction Management\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Construction Project Progress\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Construction Tasks\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contractor Payment Status\",\"col\":4}}]",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "Workspace",
+  "hide_custom": 0,
+  "is_hidden": 0,
+  "label": "Construction Management",
+  "modified": "2026-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Construction Management",
+  "name": "Construction Management",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 1,
+  "shortcuts": [
+    {"type": "DocType", "label": "Projects", "link_to": "Project", "color": "#2490ef"},
+    {"type": "DocType", "label": "Tasks", "link_to": "Task", "color": "#2490ef"},
+    {"type": "DocType", "label": "Work Packages", "link_to": "Work Package", "color": "#29cd42"},
+    {"type": "DocType", "label": "Site Daily Reports", "link_to": "Site Daily Report", "color": "#f5a623"},
+    {"type": "DocType", "label": "Progress Acceptances", "link_to": "Progress Acceptance", "color": "#f5a623"},
+    {"type": "DocType", "label": "Contractor Payments", "link_to": "Contractor Payment Request", "color": "#d63649"},
+    {"type": "DocType", "label": "Suppliers", "link_to": "Supplier", "color": "#745fb5"},
+    {"type": "Report", "label": "Project Progress", "link_to": "Construction Project Progress", "color": "#2490ef"},
+    {"type": "Report", "label": "Overdue Tasks", "link_to": "Overdue Construction Tasks", "color": "#d63649"},
+    {"type": "Report", "label": "Payment Status", "link_to": "Contractor Payment Status", "color": "#745fb5"},
+    {"type": "Report", "label": "Acceptance Summary", "link_to": "Acceptance Summary", "color": "#29cd42"}
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "CPR-.YYYY.-.#####",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "project",
+    "work_package",
+    "subcontractor",
+    "request_date",
+    "section_values",
+    "contract_value",
+    "approved_acceptance_value",
+    "previously_requested",
+    "gross_current_amount",
+    "section_deductions",
+    "deductions",
+    "total_deduction",
+    "tax_amount",
+    "net_payment_amount",
+    "section_reference",
+    "purchase_invoice",
+    "workflow_state"
+  ],
+  "fields": [
+    {
+      "fieldname": "project",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Project",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "work_package",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Work Package",
+      "options": "Work Package",
+      "reqd": 1
+    },
+    {
+      "fieldname": "subcontractor",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Subcontractor",
+      "options": "Supplier",
+      "reqd": 1
+    },
+    {
+      "fieldname": "request_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Request Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_values",
+      "fieldtype": "Section Break",
+      "label": "Payment Values"
+    },
+    {
+      "fieldname": "contract_value",
+      "fieldtype": "Currency",
+      "label": "Contract Value",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approved_acceptance_value",
+      "fieldtype": "Currency",
+      "label": "Approved Acceptance Value",
+      "read_only": 1
+    },
+    {
+      "fieldname": "previously_requested",
+      "fieldtype": "Currency",
+      "label": "Previously Requested",
+      "read_only": 1
+    },
+    {
+      "fieldname": "gross_current_amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Gross Current Amount",
+      "non_negative": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_deductions",
+      "fieldtype": "Section Break",
+      "label": "Deductions"
+    },
+    {
+      "fieldname": "deductions",
+      "fieldtype": "Table",
+      "label": "Deductions",
+      "options": "Payment Deduction Row"
+    },
+    {
+      "fieldname": "total_deduction",
+      "fieldtype": "Currency",
+      "label": "Total Deduction",
+      "read_only": 1
+    },
+    {
+      "fieldname": "tax_amount",
+      "fieldtype": "Currency",
+      "label": "Tax Amount",
+      "non_negative": 1
+    },
+    {
+      "fieldname": "net_payment_amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Net Payment Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_reference",
+      "fieldtype": "Section Break",
+      "label": "References"
+    },
+    {
+      "fieldname": "purchase_invoice",
+      "fieldtype": "Link",
+      "label": "Purchase Invoice",
+      "options": "Purchase Invoice",
+      "read_only": 1
+    },
+    {
+      "fieldname": "workflow_state",
+      "fieldtype": "Link",
+      "label": "Workflow State",
+      "no_copy": 1,
+      "options": "Workflow State",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2026-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Construction Management",
+  "name": "Contractor Payment Request",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Construction Administrator",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Contractor User",
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Construction Quantity Surveyor",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Construction Project Manager",
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "Construction Accountant",
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
