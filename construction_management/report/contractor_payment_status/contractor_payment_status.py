@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 
 def execute(filters=None):
@@ -9,13 +10,13 @@ def execute(filters=None):
 
 def get_columns():
     return [
-        {"fieldname": "subcontractor", "label": "Contractor", "fieldtype": "Link", "options": "Supplier", "width": 200},
-        {"fieldname": "project", "label": "Project", "fieldtype": "Link", "options": "Project", "width": 180},
-        {"fieldname": "contract_value", "label": "Contract Value", "fieldtype": "Currency", "width": 150},
-        {"fieldname": "approved_acceptance_value", "label": "Accepted Value", "fieldtype": "Currency", "width": 150},
-        {"fieldname": "total_requested", "label": "Total Requested", "fieldtype": "Currency", "width": 150},
-        {"fieldname": "total_approved", "label": "Total Approved", "fieldtype": "Currency", "width": 150},
-        {"fieldname": "remaining", "label": "Remaining", "fieldtype": "Currency", "width": 150},
+        {"fieldname": "subcontractor", "label": _("Contractor"), "fieldtype": "Link", "options": "Supplier", "width": 200},
+        {"fieldname": "project", "label": _("Project"), "fieldtype": "Link", "options": "Project", "width": 180},
+        {"fieldname": "contract_value", "label": _("Contract Value"), "fieldtype": "Currency", "width": 150},
+        {"fieldname": "approved_acceptance_value", "label": _("Accepted Value"), "fieldtype": "Currency", "width": 150},
+        {"fieldname": "total_requested", "label": _("Total Requested"), "fieldtype": "Currency", "width": 150},
+        {"fieldname": "total_approved", "label": _("Total Approved"), "fieldtype": "Currency", "width": 150},
+        {"fieldname": "remaining", "label": _("Remaining"), "fieldtype": "Currency", "width": 150},
     ]
 
 

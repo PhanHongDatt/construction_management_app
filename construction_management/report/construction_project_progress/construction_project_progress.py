@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 
 def execute(filters=None):
@@ -11,44 +12,44 @@ def get_columns():
     return [
         {
             "fieldname": "name",
-            "label": "Project",
+            "label": _("Project"),
             "fieldtype": "Link",
             "options": "Project",
             "width": 200,
         },
         {
             "fieldname": "project_name",
-            "label": "Project Name",
+            "label": _("Project Name"),
             "fieldtype": "Data",
             "width": 250,
         },
         {
             "fieldname": "custom_construction_status",
-            "label": "Construction Status",
+            "label": _("Construction Status"),
             "fieldtype": "Data",
             "width": 150,
         },
         {
             "fieldname": "planned_progress",
-            "label": "Planned Progress",
+            "label": _("Planned Progress"),
             "fieldtype": "Percent",
             "width": 130,
         },
         {
             "fieldname": "actual_progress",
-            "label": "Actual Progress",
+            "label": _("Actual Progress"),
             "fieldtype": "Percent",
             "width": 130,
         },
         {
             "fieldname": "overdue_tasks",
-            "label": "Overdue Tasks",
+            "label": _("Overdue Tasks"),
             "fieldtype": "Int",
             "width": 120,
         },
         {
             "fieldname": "risk_count",
-            "label": "High/Critical Risk Tasks",
+            "label": _("High/Critical Risk Tasks"),
             "fieldtype": "Int",
             "width": 160,
         },

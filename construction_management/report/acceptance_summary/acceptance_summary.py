@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 
 def execute(filters=None):
@@ -9,13 +10,13 @@ def execute(filters=None):
 
 def get_columns():
     return [
-        {"fieldname": "project", "label": "Project", "fieldtype": "Link", "options": "Project", "width": 180},
-        {"fieldname": "work_package", "label": "Work Package", "fieldtype": "Link", "options": "Work Package", "width": 180},
-        {"fieldname": "task", "label": "Task", "fieldtype": "Link", "options": "Task", "width": 150},
-        {"fieldname": "uom", "label": "UOM", "fieldtype": "Link", "options": "UOM", "width": 80},
-        {"fieldname": "requested_quantity", "label": "Requested Qty", "fieldtype": "Float", "width": 120},
-        {"fieldname": "accepted_quantity", "label": "Accepted Qty", "fieldtype": "Float", "width": 120},
-        {"fieldname": "accepted_amount", "label": "Accepted Amount", "fieldtype": "Currency", "width": 150},
+        {"fieldname": "project", "label": _("Project"), "fieldtype": "Link", "options": "Project", "width": 180},
+        {"fieldname": "work_package", "label": _("Work Package"), "fieldtype": "Link", "options": "Work Package", "width": 180},
+        {"fieldname": "task", "label": _("Task"), "fieldtype": "Link", "options": "Task", "width": 150},
+        {"fieldname": "uom", "label": _("UOM"), "fieldtype": "Link", "options": "UOM", "width": 80},
+        {"fieldname": "requested_quantity", "label": _("Requested Qty"), "fieldtype": "Float", "width": 120},
+        {"fieldname": "accepted_quantity", "label": _("Accepted Qty"), "fieldtype": "Float", "width": 120},
+        {"fieldname": "accepted_amount", "label": _("Accepted Amount"), "fieldtype": "Currency", "width": 150},
     ]
 
 

@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 
 def execute(filters=None):
@@ -9,13 +10,13 @@ def execute(filters=None):
 
 def get_columns():
     return [
-        {"fieldname": "name", "label": "Task", "fieldtype": "Link", "options": "Task", "width": 150},
-        {"fieldname": "subject", "label": "Subject", "fieldtype": "Data", "width": 250},
-        {"fieldname": "project", "label": "Project", "fieldtype": "Link", "options": "Project", "width": 180},
-        {"fieldname": "custom_responsible_engineer", "label": "Responsible Engineer", "fieldtype": "Link", "options": "Employee", "width": 180},
-        {"fieldname": "exp_end_date", "label": "Expected End Date", "fieldtype": "Date", "width": 130},
-        {"fieldname": "custom_risk_level", "label": "Risk Level", "fieldtype": "Data", "width": 100},
-        {"fieldname": "custom_delay_reason", "label": "Delay Reason", "fieldtype": "Data", "width": 200},
+        {"fieldname": "name", "label": _("Task"), "fieldtype": "Link", "options": "Task", "width": 150},
+        {"fieldname": "subject", "label": _("Subject"), "fieldtype": "Data", "width": 250},
+        {"fieldname": "project", "label": _("Project"), "fieldtype": "Link", "options": "Project", "width": 180},
+        {"fieldname": "custom_responsible_engineer", "label": _("Responsible Engineer"), "fieldtype": "Link", "options": "Employee", "width": 180},
+        {"fieldname": "exp_end_date", "label": _("Expected End Date"), "fieldtype": "Date", "width": 130},
+        {"fieldname": "custom_risk_level", "label": _("Risk Level"), "fieldtype": "Data", "width": 100},
+        {"fieldname": "custom_delay_reason", "label": _("Delay Reason"), "fieldtype": "Data", "width": 200},
     ]
 
 

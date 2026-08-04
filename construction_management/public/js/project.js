@@ -9,7 +9,7 @@ frappe.ui.form.on("Project", {
       frm.doc.custom_construction_status === "On Hold"
     ) {
       frm.dashboard.set_headline_alert(
-        __("This project is " + frm.doc.custom_construction_status),
+        __("This project is {0}", [__(frm.doc.custom_construction_status)]),
         "yellow"
       );
     }
